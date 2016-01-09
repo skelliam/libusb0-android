@@ -57,38 +57,10 @@ Patches can be sent to libusb-devel@lists.sourceforge.net.
 If the patch fixes a bug, it is usually a good idea to include
 all the information described in "How to Report Bugs".
 
-Building
-========
+Building For Android
+====================
 
-It should be as simple as running these two commands:
-
-./configure
-make
-
-One common problem is building the SGML documentation. On some systems,
-like SuSE, you will need to set the SGML_CATALOG_FILES environment
-variable to something similar to this (actual paths may vary):
-
-export SGML_CATALOG_FILES="/usr/share/sgml/CATALOG.docbook_3:/usr/share/sgml/CATALOG.docbook-dsssl-stylesheets:/usr/share/sgml/openjade/catalog"
-
-On recent versions of Fedora Core (FC5 Test 2 atleast), this command may be
-needed:
-
-export SGML_CATALOG_FILES="/etc/sgml/catalog"
-
-or possibly:
-
-export SGML_CATALOG_FILES="/etc/sgml/docbook"
-
-C++ Support
-===========
-
-There are reasonable unit tests available - run "make check" to do the
-tests. Note that some of the tests will unexpectedly pass if you don't have
-a specfic type of Logitech mouse connected, and some are expected to fail
-unless you are running as root (or otherwise have permissions to access the
-device).
-
-Building the C++ documentation requires Doxygen
-(http://www.stack.nl/~dimitri/doxygen/) 
+1. Install the Android NDK
+2. cd libusb0-android/jni
+3. ndk-build
 
